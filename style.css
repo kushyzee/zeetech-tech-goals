@@ -114,13 +114,18 @@ h1 {
   border-radius: 12px;
 }
 
+.label {
+  font-size: var(--text-lg);
+}
+
 .time {
+  margin-top: 1rem;
   font-size: var(--text-3xl);
   font-weight: 700;
 }
 
 .date {
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
 }
 
 .main-container {
@@ -216,27 +221,11 @@ footer p {
 
 @media (min-width: 768px) {
   :root {
-    --text-4xl: 4.8rem;
     --text-2xl: 3rem;
-    --text-lg: 2rem;
     --text-3xl: 3.6rem;
     --text-xl: 2.4rem;
-    --text-base: 1.8rem;
     --text-sm: 1.6rem;
     --text-xs: 1.4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    padding: 4rem 4rem 9.6rem;
-    color: var(--white);
-  }
-
-  header {
-    margin-bottom: 9.6rem;
-    max-width: 1280px;
-    margin-inline: auto;
   }
 
   .main-banner {
@@ -252,6 +241,53 @@ footer p {
     flex: 1;
   }
 
+  .main-container {
+    max-width: 1152px;
+  }
+
+  .goals {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .profile-card h3 {
+    font-size: var(--text-xl);
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .card .timeline-status {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-4xl: 4.8rem;
+    --text-base: 1.8rem;
+    --text-lg: 2rem;
+  }
+
+  .hero {
+    padding: 4rem 4rem 9.6rem;
+    color: var(--white);
+  }
+
+  header {
+    margin-bottom: 9.6rem;
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+
+  .subheading {
+    margin-bottom: 3.6rem;
+  }
+
   .date-time {
     padding-block: 6.4rem;
     margin-top: 0;
@@ -260,7 +296,6 @@ footer p {
   .main-container {
     padding: 4rem;
     margin-bottom: 6.4rem;
-    max-width: 1152px;
   }
 
   .profile-card {
@@ -268,8 +303,6 @@ footer p {
   }
 
   .goals {
-    display: flex;
-    flex-direction: row;
     gap: 2rem;
   }
 
@@ -277,12 +310,13 @@ footer p {
     padding: 2rem;
   }
 
-  .card:last-child h3{
-    max-width: 24ch;
-  }
-
   .card p {
     line-height: 28px;
+  }
+
+  .card .timeline-status {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   footer {
